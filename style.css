@@ -21,8 +21,16 @@ body {
     height: 40vh;
 }
 
+.grid-container {
+    display: flex;
+    min-height: 20vh;
+}
 
-
+#landmark-grid-container {
+    margin-top: 3vh;
+    min-width: 98vw;
+    max-height: 48vh;
+}
 
 .infoLine {
     display: flex;
@@ -39,7 +47,7 @@ footer {
     width: 100%;
     position: absolute;
     left: 0;
-    bottom: 25vh;
+    bottom: 35vh;
 }
 
 
@@ -58,13 +66,13 @@ footer {
 
     .grid-container {
         display: flex;
-        max-height: 25vh;
+
+
     }
 
     #landmark-grid-container {
         margin-top: 3vh;
-        min-width: 98vw;
-        max-height: 25vh;
+        border: blue solid 2px;
     }
 
     .input_video,
@@ -74,5 +82,10 @@ footer {
         min-height: 40vh;
 
     }
+
+    canvas:first-child {
+        min-height: 35vh;
+    }
+
 
 }
