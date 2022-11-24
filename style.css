@@ -1,0 +1,24 @@
+.input_video,
+.output_canvas {
+    width: 50%;
+    height: 50vh;
+
+}
+
+.output_canvas {}
+
+.cam-container {
+    display: flex;
+    width: 100vw;
+    height: 48vh;
+}
+
+.grid-container {
+    display: flex;
+    height: 48vh;
+}
+
+.landmark-grid-container {
+    height: 30vh;
+    width: 100vw;
+}
