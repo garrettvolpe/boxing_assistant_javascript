@@ -1,26 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .input_video,
 .output_canvas {
-    width: 50%;
-    height: 50vh;
+    min-width: 45vw;
+    min-height: 40vh;
 
 }
 
-.output_canvas {}
+#output_canvas {
+    margin-left: 10vw;
+}
 
 .cam-container {
     display: flex;
     width: 100vw;
-    height: 48vh;
+    height: 40vh;
 }
 
 .grid-container {
     display: flex;
-    height: 48vh;
+    min-height: 45vh;
+    max-height: 10vh;
 }
 
 #landmark-grid-container {
-    height: 30vh;
-    width: 100vw;
+    margin-top: 3vh;
+    min-width: 98vw;
+    max-height: 48vh;
 }
 
 .infoLine {
@@ -38,7 +47,7 @@
 #straightNum {}
 
 
-@media only screen and (min-width: 760px) {
+@media only screen and (max-width: 760px) {
 
     h2 {
         font-size: 64px;
@@ -48,6 +57,6 @@
     .cam-container {
         width: 100%;
         justify-content: center;
-        flex-direction: column;
+
     }
 }
