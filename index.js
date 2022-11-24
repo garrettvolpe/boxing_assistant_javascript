@@ -127,13 +127,13 @@ function onResults(results) {
     if (angle_left_elbow < 50 && angle_right_elbow < 50) {
         if (l_pinky[1] < l_mouth[1] && r_pinky[1] < r_mouth[1]) {
             off_vs_def_text = "Defense"
-            document.getElementById("input_video").style.border = "blue solid 10px"
+            document.getElementById("input_video").style.border = "blue solid 30px"
         }
     }
     else if (angle_right_elbow > 110 || angle_left_elbow > 110) {
         if (angle_rhip_rshoulder_rwrist > 70 || angle_lhip_lshoulder_lwrist > 70) {
             off_vs_def_text = "Offense"
-            document.getElementById("input_video").style.border = "red solid 10px"
+            document.getElementById("input_video").style.border = "red solid 30px"
         }
     }
     else {

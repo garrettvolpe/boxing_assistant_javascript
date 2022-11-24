@@ -4,10 +4,15 @@ body {
     background-color: rgb(227, 227, 233);
 }
 
+h2 {
+    font-size: 64px;
+}
+
 .input_video,
 .output_canvas {
     min-width: 45vw;
     min-height: 40vh;
+
 
 }
 
@@ -55,7 +60,6 @@ footer {
 @media only screen and (max-width: 1080px) {
 
     h2 {
-        font-size: 64px;
         color: green;
     }
 
