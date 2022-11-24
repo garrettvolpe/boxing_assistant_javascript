@@ -18,7 +18,7 @@
     height: 48vh;
 }
 
-.landmark-grid-container {
+#landmark-grid-container {
     height: 30vh;
     width: 100vw;
 }
@@ -33,11 +33,12 @@
 
 }
 
+
 #jabNum,
 #straightNum {}
 
 
-@media only screen and (min-width: 760px) {
+@media only screen and (max-width: 760px) {
 
     h2 {
         font-size: 64px;

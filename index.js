@@ -1,9 +1,8 @@
 
-
-const videoElement = document.getElementsByClassName('input_video')[0];
-const canvasElement = document.getElementsByClassName('output_canvas')[0];
+const videoElement = document.getElementById('input_video');
+const canvasElement = document.getElementById('output_canvas');
 const canvasCtx = canvasElement.getContext('2d');
-const landmarkContainer = document.getElementsByClassName('landmark-grid-container')[0];
+const landmarkContainer = document.getElementById('landmark-grid-container');
 const grid = new LandmarkGrid(landmarkContainer, {
     connectionColor: 0xff0000,
     range: 2,
@@ -21,7 +20,7 @@ let stance = "Orthodox"
 let jab_counter = 0;
 let straight_stage;
 let straight_counter = 0;
-
+let off_vs_def_text;
 
 
 
@@ -76,6 +75,8 @@ function onResults(results) {
     let r_pinky = [(results.poseLandmarks[18].x), (results.poseLandmarks[18].y)];
     let l_pinky = [(results.poseLandmarks[17].x), (results.poseLandmarks[17].y)];
     let nose = [(results.poseLandmarks[0].x), (results.poseLandmarks[0].y)];
+    let l_mouth = [(results.poseLandmarks[9].x), (results.poseLandmarks[9].y)];
+    let r_mouth = [(results.poseLandmarks[10].x), (results.poseLandmarks[10].y)];
 
     // get angles
     angle_left_elbow = calculate_angle(l_shoulder, l_elbow, l_wrist)
@@ -118,16 +119,26 @@ function onResults(results) {
         }
     }
 
-
-
-
-
-
     document.getElementById("jabNum").innerText = jab_counter;
     document.getElementById("straightNum").innerText = straight_counter;
 
 
 
+    if (angle_left_elbow < 50 && angle_right_elbow < 50) {
+        if (l_pinky[1] < l_mouth[1] && r_pinky[1] < r_mouth[1]) {
+            off_vs_def_text = "Defense"
+            document.getElementById("input_video").style.border = "blue solid 10px"
+        }
+    }
+    else if (angle_right_elbow > 110 || angle_left_elbow > 110) {
+        if (angle_rhip_rshoulder_rwrist > 70 || angle_lhip_lshoulder_lwrist > 70) {
+            off_vs_def_text = "Offense"
+            document.getElementById("input_video").style.border = "red solid 10px"
+        }
+    }
+    else {
+        document.getElementById("input_video").style.border = "none"
+    }
 
 
 
