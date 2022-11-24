@@ -61,5 +61,17 @@ body {
         max-height: 25vh;
     }
 
+    #landmark-grid-container {
+        margin-top: 3vh;
+        min-width: 98vw;
+        max-height: 25vh;
+    }
+
+    .input_video,
+    .output_canvas {
+        min-width: 47vw;
+        min-height: 65vh;
+
+    }
 
 }
