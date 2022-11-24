@@ -54,6 +54,12 @@ body {
     .cam-container {
         width: 100%;
         justify-content: center;
-
     }
+
+    .grid-container {
+        display: flex;
+        max-height: 25vh;
+    }
+
+
 }
