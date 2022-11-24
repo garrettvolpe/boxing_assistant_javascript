@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: rgb(227, 227, 233);
 }
 
 .input_video,
@@ -20,17 +21,8 @@ body {
     height: 40vh;
 }
 
-.grid-container {
-    display: flex;
-    min-height: 45vh;
-    max-height: 10vh;
-}
 
-#landmark-grid-container {
-    margin-top: 3vh;
-    min-width: 98vw;
-    max-height: 48vh;
-}
+
 
 .infoLine {
     display: flex;
@@ -40,6 +32,14 @@ body {
     display: flex;
     justify-content: space-evenly;
 
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 25vh;
 }
 
 
@@ -69,8 +69,9 @@ body {
 
     .input_video,
     .output_canvas {
-        min-width: 47vw;
-        min-height: 65vh;
+        min-width: 45vw;
+        border: blue solid 2px;
+        min-height: 40vh;
 
     }
 
