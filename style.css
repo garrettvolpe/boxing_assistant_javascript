@@ -47,12 +47,12 @@ footer {
     width: 100%;
     position: absolute;
     left: 0;
-    bottom: 35vh;
+    bottom: 25vh;
 }
 
 
 
-@media only screen and (min-width: 760px) {
+@media only screen and (max-width: 1080px) {
 
     h2 {
         font-size: 64px;
@@ -87,5 +87,12 @@ footer {
         min-height: 35vh;
     }
 
+    footer {
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 45vh;
+    }
 
 }
