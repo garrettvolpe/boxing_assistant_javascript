@@ -25,5 +25,23 @@
 
 .infoLine {
     display: flex;
-    gap: 2px
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#jabNum,
+#straightNum {}
+
+
+@media only screen and (min-width: 760px) {
+
+    h2 {
+        font-size: 64px;
+        color: green;
+    }
+
 }
