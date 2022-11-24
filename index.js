@@ -22,6 +22,10 @@ let jab_counter = 0;
 let straight_stage;
 let straight_counter = 0;
 
+
+
+
+
 function onResults(results) {
     if (!results.poseLandmarks) {
         grid.updateLandmarks([]);
@@ -119,8 +123,8 @@ function onResults(results) {
 
 
 
-
-    console.log(jab_counter)
+    document.getElementById("jabNum").innerText = jab_counter;
+    document.getElementById("straightNum").innerText = straight_counter;
 
 
 

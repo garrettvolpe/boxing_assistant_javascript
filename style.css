@@ -22,3 +22,8 @@
     height: 30vh;
     width: 100vw;
 }
+
+.infoLine {
+    display: flex;
+    gap: 2px
+}
